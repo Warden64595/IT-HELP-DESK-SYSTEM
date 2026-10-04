@@ -1,7 +1,7 @@
 # [Project Title]
 > One-line description. Example: A web-based help desk where users submit IT tickets and technicians track and resolve them, with AI-assisted ticket classification.
 
-**Live demo:** [link] | **Documentation (PDF):** [link] | **Status:** [In progress / Completed]
+**Live demo:** [link] | **Documentation (PDF):** [link] | **Status:** [In progress]
 
 ## 1. Project Overview
 What the system does in 3 to 4 sentences. Who uses it, and what it replaces.

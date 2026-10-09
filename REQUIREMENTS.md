@@ -11,7 +11,7 @@ IT teams receive many support tickets but rarely study the pattern. Without anal
 | No view of busy days | Staffing is not planned |
 
 ## 3. Proposed System
-A set of cleaned ticket data, SQL queries and an Excel or Google Sheets dashboard that answers four questions: what happens most, how long it takes to fix, when requests peak, and who handles them. It ends with written findings and recommendations.
+A set of cleaned ticket data, SQL queries and an Excel dashboard that answers four questions: what happens most, how long it takes to fix, when requests peak, and who handles them. It ends with written findings and recommendations.
 
 ## 4. Actors
 | Actor | Description |
@@ -30,11 +30,13 @@ A set of cleaned ticket data, SQL queries and an Excel or Google Sheets dashboar
 | FR-05 | The dashboard shall show key numbers: total tickets, top category, average resolution time and busiest weekday. | Medium |
 | FR-06 | The project shall include written findings and recommendations. | High |
 | FR-07 | The steps to reproduce the analysis shall be documented in the README. | Medium |
+| FR-08 | The raw export shall be kept unchanged in `data/raw/`, and a script shall turn it into the cleaned file. | Medium |
+| FR-09 | Chart images shall be produced from the SQL results. | Medium |
 
 ## 6. Non-Functional Requirements
 | ID | Category | Requirement |
 |---|---|---|
-| NFR-01 | Accuracy | SQL totals match Excel pivot table totals. |
+| NFR-01 | Accuracy | SQL totals match Excel dashboard totals. |
 | NFR-02 | Privacy | No names, employee IDs or confidential company details appear in any public file. |
 | NFR-03 | Reproducibility | Another person can repeat the analysis from the README. |
 | NFR-04 | Usability | Charts have titles, labeled axes and units, and are readable on screen. |
@@ -50,9 +52,11 @@ A set of cleaned ticket data, SQL queries and an Excel or Google Sheets dashboar
 
 ## 8. Constraints and Assumptions
 - Real ticket data is used only with permission and with all personal details removed. Otherwise sample data is used and labeled as sample.
-- Tools: MySQL and Excel or Google Sheets.
+- Tools: MySQL or SQLite, Python and Excel.
 
 ## 9. Design Artifacts
 - Database design (ERD): `docs/erd.png`
 - Dashboard screenshot: `docs/dashboard.png`
+- Chart images: `charts/`
+- Excel dashboard: `dashboard/dashboard.xlsx`
 - SQL files: `sql/schema.sql`, `sql/queries.sql`
